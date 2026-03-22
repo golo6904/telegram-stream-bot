@@ -1,3 +1,4 @@
+from flask import Flask
 from pyrogram import Client, filters
 from pytgcalls import PyTgCalls
 from pytgcalls.types.input_stream import InputStream, InputAudioStream, InputVideoStream
@@ -34,3 +35,21 @@ async def play(client, message):
 app.start()
 call.start()
 app.idle()
+import threading
+from flask import Flask
+app_web = Flask('')
+
+@app_web.route('/')
+def home():
+    return "Bot is running!"
+
+def run():
+    app_web.run(host='0.0.0.0', port=10000)
+
+threading.Thread(target=run).start()
+
+
+
+
+
+
