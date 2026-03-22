@@ -1,4 +1,1 @@
-pyrogram
-yt-dlp
-ffmpeg-python
-flask
+
