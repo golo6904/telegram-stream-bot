@@ -32,5 +32,12 @@ async def reel(client, message):
 
     except Exception as e:
         await msg.edit(f"❌ Error: {e}")
+from pyrogram import idle
+import asyncio
 
-app.run()
+async def main():
+    await app.start()
+    print("Bot started")
+    await idle()
+
+asyncio.run(main())
